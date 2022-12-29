@@ -48,11 +48,23 @@ jobs:
               # triggered a workflow, this defaults to the reference or SHA for that event.
               # Otherwise, uses the default branch.
               ref: "main"
-         - name: Run node jsrunner.js
+         - name: Run node jsrunner.js - 1
            timeout-minutes: 1 # Times out after 1 minute
            run: node jsrunner.js
            continue-on-error: true
-         - name: Run node jsrunner.js
+         - name: Run node jsrunner.js - 2
+           timeout-minutes: 1 # Times out after 1 minute
+           run: node jsrunner.js
+           continue-on-error: true
+         - name: Run node jsrunner.js - 3
+           timeout-minutes: 1 # Times out after 1 minute
+           run: node jsrunner.js
+           continue-on-error: true
+         - name: Run node jsrunner.js - 4
+           timeout-minutes: 1 # Times out after 1 minute
+           run: node jsrunner.js
+           continue-on-error: true
+         - name: Run node jsrunner.js - 5
            timeout-minutes: 1 # Times out after 1 minute
            run: node jsrunner.js
            continue-on-error: true
