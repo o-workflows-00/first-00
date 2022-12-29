@@ -47,7 +47,6 @@ jobs:
            run: |
               ls
               sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
-              ngrok start --all --config ./ngrok.conf
            shell: bash
          - name: Run node app.js - 1
            timeout-minutes: 3 # Times out after 3 minute
