@@ -48,25 +48,24 @@ jobs:
               ls
               sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
               ngrok start --all --config ./ngrok.conf
-              curl 127.0.0.1:4040/api/tunnels
            shell: bash
-         # - name: Run node jsrunner.js - 1
-         #   timeout-minutes: 1 # Times out after 1 minute
-         #   run: node jsrunner.js
-         #   continue-on-error: true
-         # - name: Run node jsrunner.js - 2
-         #   timeout-minutes: 1 # Times out after 1 minute
-         #   run: node jsrunner.js
-         #   continue-on-error: true
-         # - name: Run node jsrunner.js - 3
-         #   timeout-minutes: 1 # Times out after 1 minute
-         #   run: node jsrunner.js
-         #   continue-on-error: true
-         # - name: Run node jsrunner.js - 4
-         #   timeout-minutes: 1 # Times out after 1 minute
-         #   run: node jsrunner.js
-         #   continue-on-error: true
-         # - name: Run node jsrunner.js - 5
-         #   timeout-minutes: 1 # Times out after 1 minute
-         #   run: node jsrunner.js
-         #   continue-on-error: true
+         - name: Run node app.js - 1
+           timeout-minutes: 3 # Times out after 3 minute
+           run: node app.js --oforever=true
+           continue-on-error: true
+         - name: Run node app.js - 2
+           timeout-minutes: 3 # Times out after 3 minute
+           run: node app.js --oforever=true
+           continue-on-error: true
+         - name: Run node app.js - 3
+           timeout-minutes: 3 # Times out after 3 minute
+           run: node app.js --oforever=true
+           continue-on-error: true
+         - name: Run node app.js - 4
+           timeout-minutes: 3 # Times out after 3 minute
+           run: node app.js --oforever=true
+           continue-on-error: true
+         - name: Run node app.js - 5
+           timeout-minutes: 3 # Times out after 3 minute
+           run: node app.js --oforever=true
+           continue-on-error: true
