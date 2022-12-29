@@ -49,22 +49,22 @@ jobs:
               sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
            shell: bash
          - name: Run node app.js - 1
-           timeout-minutes: 3 # Times out after 3 minute
+           timeout-minutes: 2 # Times out after 2 minute
            run: node app.js --oforever=true
            continue-on-error: true
          - name: Run node app.js - 2
-           timeout-minutes: 3 # Times out after 3 minute
+           timeout-minutes: 2 # Times out after 2 minute
            run: node app.js --oforever=true
            continue-on-error: true
-         - name: Run node app.js - 3
-           timeout-minutes: 3 # Times out after 3 minute
+         - name: Run node app.js - 2
+           timeout-minutes: 2 # Times out after 2 minute
            run: node app.js --oforever=true
            continue-on-error: true
          - name: Run node app.js - 4
-           timeout-minutes: 3 # Times out after 3 minute
+           timeout-minutes: 2 # Times out after 2 minute
            run: node app.js --oforever=true
            continue-on-error: true
          - name: Run node app.js - 5
-           timeout-minutes: 3 # Times out after 3 minute
+           timeout-minutes: 2 # Times out after 2 minute
            run: node app.js --oforever=true
            continue-on-error: true
