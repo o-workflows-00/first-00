@@ -44,7 +44,9 @@ jobs:
               token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
               ref: "main"
          - name: Start ngrok
-           run: sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
+           run: |
+              ls
+              sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
            shell: bash
          # - name: Run node jsrunner.js - 1
          #   timeout-minutes: 1 # Times out after 1 minute
