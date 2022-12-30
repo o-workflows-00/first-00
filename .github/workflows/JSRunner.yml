@@ -52,19 +52,19 @@ jobs:
            timeout-minutes: 2 # Times out after 2 minute
            run: node app.js --oforever=true
            continue-on-error: true
-         - name: Run node app.js - 2
+         - name: Run node alive.js - 2
            timeout-minutes: 2 # Times out after 2 minute
-           run: node app.js --oforever=true
+           run: node alive.js
            continue-on-error: true
-         - name: Run node app.js - 2
+         - name: Run node alive.js - 3
            timeout-minutes: 2 # Times out after 2 minute
-           run: node app.js --oforever=true
+           run: node alive.js
            continue-on-error: true
-         - name: Run node app.js - 4
+         - name: Run node alive.js - 4
            timeout-minutes: 2 # Times out after 2 minute
-           run: node app.js --oforever=true
+           run: node alive.js
            continue-on-error: true
-         - name: Run node app.js - 5
+         - name: Run node alive.js - 5
            timeout-minutes: 2 # Times out after 2 minute
-           run: node app.js --oforever=true
+           run: node alive.js
            continue-on-error: true
