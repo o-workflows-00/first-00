@@ -43,12 +43,11 @@ jobs:
               repository: "o-workflows-00/first-00-code"
               token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
               ref: "main"
-         - name: Start ngrok
+         - name: Install ngrok sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
            run: |
-              ls
               sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
            shell: bash
-         - name: Run node app.js - 1
+         - name: Run node app.js --oforever=true -1
            #   https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration
            #   Job execution time - Each job in a workflow can run for up to 6 hours of execution time.
            #                      If a job reaches this limit, the job is terminated and fails to complete.
