@@ -55,7 +55,7 @@ jobs:
            #   Workflow run time - Each workflow run is limited to 35 days.
            #                      If a workflow run reaches this limit, the workflow run is cancelled.
            #                      This period includes execution duration, and time spent on waiting and approval
-           timeout-minutes: 360 # Times out after 2 minute
+           timeout-minutes: 5 # Times out after 2 minute
            run: node app.js --oforever=true
            continue-on-error: true
          - name: Run node alive.js - 2
